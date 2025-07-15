@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Portfolio Santiago</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+        <!-- Include Font Awesome and Devicon CSS (if not already) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+        <!-- Devicon -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+        <!-- AOS (Animate On Scroll) -->
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+        <style>
+            .dev-icons .list-inline-item {
+                position: relative;
+                margin: 10px;
+                transition: transform 0.3s ease;
+            }
+
+            .dev-icons .list-inline-item:hover {
+                transform: scale(1.2);
+                cursor: pointer;
+            }
+
+            .dev-icons i,
+            .dev-icons img {
+                font-size: 2.5rem;
+                transition: color 0.3s ease;
+            }
+
+            .dev-icons img {
+                vertical-align: middle;
+                transition: transform 0.3s ease;
+            }
+
+            .dev-icons .list-inline-item::after {
+                content: attr(title);
+                position: absolute;
+                bottom: -30px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: #1e1e1e;
+                color: #fff;
+                font-size: 0.75rem;
+                padding: 4px 8px;
+                border-radius: 4px;
+                white-space: nowrap;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                pointer-events: none;
+            }
+
+            .dev-icons .list-inline-item:hover::after {
+                opacity: 1;
+            }
+
+
+            .card {
+                transition: transform 0.4s ease, box-shadow 0.4s ease;
+                border-radius: 10px;
+            }
+
+            .card:hover {
+                transform: scale(1.03);
+                box-shadow: 0 12px 30px rgba(0, 94, 255, 0.35);
+                z-index: 5;
+            }
+
+            /* Smooth image zoom on hover */
+            .card img {
+                transition: transform 0.4s ease-in-out;
+                will-change: transform;
+            }
+
+            .card img:hover {
+                transform: scale(1.08);
+            }
+
+            /* Interactive tech icons */
+            .interactive-icon {
+                transition: transform 0.3s ease, filter 0.3s ease;
+                cursor: pointer;
+                will-change: transform;
+            }
+
+            .interactive-icon:hover {
+                transform: scale(1.25) rotate(3deg);
+                filter: brightness(1.4) drop-shadow(0 2px 6px rgba(0, 210, 91, 0.3));
+            }
+
+            /* Optional tooltip style for better visibility (if you use Bootstrap tooltip) */
+            [data-bs-toggle="tooltip"] {
+                cursor: help;
+            }
+
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1050;
+                padding-top: 50px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.85);
+                text-align: center;
+            }
+
+
+            .modal-content {
+                margin: auto;
+                display: block;
+                max-width: 90vw;
+                max-height: 85vh;
+                width: auto;
+                height: auto;
+                object-fit: contain;
+                border-radius: 6px;
+                animation: zoomIn 0.3s ease;
+            }
+
+            @keyframes zoomIn {
+                from {transform: scale(0.8); opacity: 0;}
+                to {transform: scale(1); opacity: 1;}
+            }
+
+            .modal-close {
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                color: #fff;
+                font-size: 35px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            .modal-close:hover {
+                color: #ff0000;
+            }
+
+
+            .modalDesc {
+                display: none;
+                position: fixed;
+                z-index: 9999;
+                top: 0; left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(0, 0, 0, 0.85);
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 20px;
+                overflow-y: auto;
+            }
+
+            .modal-content-wrapper-Desc {
+                max-width: 90%;
+                max-height: 90%;
+            }
+
+            .modal-img-Desc {
+                max-width: 100%;
+                max-height: 60vh;
+                border-radius: 8px;
+                box-shadow: 0 0 20px rgba(0,210,91,0.4);
+            }
+
+
+        </style>
+
+
+    </head>
+    <body id="page-top" style="background-color:#1c2339" data-aos-easing="ease" data-aos-duration="800" data-aos-delay="0">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNav" style="background-color:#38425e">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Ranie Nathaniel M. Santiago </span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/ProfileSantiago.jpg" alt="..." /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#FinalReport">Final Report</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About -->
+            <section class="resume-section" id="about">
+            <div class="resume-section-content" data-aos="fade-up">
+                <h1 class="mb-0" style="color:#ced4da;">
+                Ranie Nathaniel M.
+                <span style="color:#00d25b;">Santiago</span>
+                </h1>
+
+                <div class="subheading mb-5" style="color:#ced4da;">
+                Bachelor of Science in Information Technology<br>
+                Barangay Dita, Santa Rosa City, Laguna · 0966 873 9549 · 
+                <a href="#" style="color:#00d25b;">ranienathanielsantiago@gmail.com</a>
+                </div>
+
+                <span class="lead" style="color:#ced4da;">Brief Introduction</span>
+                <p class="lead mb-5 mt-2" style="color:#ced4da;">
+                I am currently pursuing a Bachelor of Science in Information Technology at Mapúa Malayan Colleges Laguna. As part of my academic journey, I am engaged in a practicum to apply theoretical knowledge in real-world settings. This hands-on experience allows me to work on system development, data management, debugging, and collaboration with project stakeholders.
+                <br><br>
+                Through this practicum, I am transitioning from student to industry-ready professional enhancing my skills in system analysis, web development, and collaborative software engineering. It also strengthens my soft skills such as communication, adaptability, and time management—qualities that are essential for today’s IT professionals.
+                </p>
+
+                <!-- Social Icons -->
+                <div class="social-icons">
+                <a class="social-icon" href="https://linkedin.com/in/ranienathanielsantiago" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="social-icon" href="https://github.com/raniesantiGIT" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                </div>
+            </div>
+            </section>
+
+
+            <hr class="m-0" />
+
+            <!-- Experience -->
+            <section class="resume-section" id="experience">
+            <div class="resume-section-content" data-aos="fade-up">
+                <h2 class="mb-5" style="color:#ced4da;">Experience</h2>
+
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0" style="color:#ced4da;">IT Intern: System Development</h3>
+                    <div class="subheading mb-3" style="color:#ced4da;">City Government of Biñan</div>
+                    <p style="color:#ced4da;">
+                    Worked under the Information Communications Technology Office (ICTO) to enhance programming skills, practice proper project timelines, and collaborate with stakeholders. Developed a web-based system for the City Human Settlements and Livelihood Office to digitize paper-based forms into an online system.
+                    </p>
+                    <span style="color:#ced4da;">Brgy. Zapote, Biñan City, 4024 Laguna</span>
+                </div>
+                <div class="flex-shrink-0 text-md-end mt-3 mt-md-0">
+                    <span style="color:#00d25b;">2025 – Present</span>
+                </div>
+                </div>
+            </div>
+            </section>
+
+            <hr class="m-0" />
+
+            <!-- Education -->
+            <section class="resume-section" id="education">
+            <div class="resume-section-content" data-aos="fade-up">
+                <h2 class="mb-5" style="color:#ced4da">Education</h2>
+
+                <!-- College -->
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex-grow-1">
+                    <span class="lead" style="color:#ced4da">College</span>
+                    <h3 class="mb-0" style="color:#ced4da">Mapua Malayan Colleges Laguna</h3>
+                    <div class="subheading mb-2" style="color:#ced4da">Bachelor of Science in Information Technology</div>
+                    <ul style="color:#ced4da">
+                    <li>Consistent Dean’s Lister (AY: 2021–2022)</li>
+                    <li>Dean’s Lister (AY: 2023–2024, 3rd Term)</li>
+                    </ul>
+                    <div style="color:#ced4da">Pulo-Diezmo Road, Cabuyao City, 4025 Laguna</div>
+                </div>
+                <div class="flex-shrink-0 text-md-end mt-3 mt-md-0">
+                    <span style="color:#00d25b;">2021 – Present</span>
+                </div>
+                </div>
+
+                <!-- Senior High -->
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5" data-aos="fade-up" data-aos-delay="150">
+                <div class="flex-grow-1">
+                    <span class="lead" style="color:#ced4da">Senior High School</span>
+                    <h3 class="mb-0" style="color:#ced4da">Mapua Malayan Colleges Laguna</h3>
+                    <div class="subheading mb-2" style="color:#ced4da">ICT Strand – Information Communications Technology</div>
+                    <div style="color:#ced4da">Pulo-Diezmo Road, Cabuyao City, 4025 Laguna</div>
+                </div>
+                <div class="flex-shrink-0 text-md-end mt-3 mt-md-0">
+                    <span style="color:#00d25b;">2019 – 2021</span>
+                </div>
+                </div>
+
+                <!-- Junior High -->
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex-grow-1">
+                    <span class="lead" style="color:#ced4da">Junior High School</span>
+                    <h3 class="mb-0" style="color:#ced4da">Dominican College Sta. Rosa</h3>
+                    <div class="subheading mb-2" style="color:#ced4da">Junior High Student</div>
+                    <div style="color:#ced4da">San Lorenzo South, City of Santa Rosa, 4026 Laguna</div>
+                </div>
+                <div class="flex-shrink-0 text-md-end mt-3 mt-md-0">
+                    <span style="color:#00d25b;">2015 – 2019</span>
+                </div>
+                </div>
+
+                <!-- Elementary -->
+                <div class="d-flex flex-column flex-md-row justify-content-between" data-aos="fade-up" data-aos-delay="250">
+                <div class="flex-grow-1">
+                    <span class="lead" style="color:#ced4da">Elementary School</span>
+                    <h3 class="mb-0" style="color:#ced4da">Dominican College Sta. Rosa</h3>
+                    <div class="subheading mb-2" style="color:#ced4da">Elementary Student</div>
+                    <div style="color:#ced4da">San Lorenzo South, City of Santa Rosa, 4026 Laguna</div>
+                </div>
+                <div class="flex-shrink-0 text-md-end mt-3 mt-md-0">
+                    <span style="color:#00d25b;">2009 – 2015</span>
+                </div>
+                </div>
+            </div>
+            </section>
+
+
+            <hr class="m-0" />
+            
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content" data-aos="fade-up">
+                    <h2 class="mb-5" style="color:#ced4da">Skills</h2>
+
+                    <div class="subheading mb-3" style="color:#ced4da">Programming Languages & Software Tools</div>
+                        <ul class="list-inline dev-icons">
+                            <li class="list-inline-item interactive-icon" title="HTML5"><i class="fab fa-html5" style="color:#e34f26;"></i></li>
+                            <li class="list-inline-item interactive-icon" title="CSS3"><i class="fab fa-css3-alt" style="color:#1572b6;"></i></li>
+                            <li class="list-inline-item interactive-icon" title="Python">
+                                <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg" alt="Python" style="width:45px; height:auto;">
+                            </li>
+                            <li class="list-inline-item interactive-icon" title="PyCharm">
+                                <img src="https://cdn.worldvectorlogo.com/logos/jetbrains-pycharm.svg" alt="PyCharm Community" style="width:40px; height:auto;">
+                            </li>
+                            <li class="list-inline-item interactive-icon" title="Database"><i class="fas fa-database" style="color:#f29111;"></i></li>
+                            <li class="list-inline-item interactive-icon" title="PHP"><i class="fab fa-php" style="color:#8892be;"></i></li>
+                            <li class="list-inline-item interactive-icon" title="Bootstrap"><i class="fab fa-bootstrap" style="color:#00d25b;"></i></li>
+                            <li class="list-inline-item interactive-icon" title="C#"><i class="devicon-csharp-plain colored" style="font-size:45px;"></i></li>
+                            <li class="list-inline-item interactive-icon" title="C"><i class="devicon-c-plain colored" style="font-size:45px;"></i></li>
+                            <li class="list-inline-item interactive-icon" title="C++"><i class="devicon-cplusplus-plain colored" style="font-size:45px;"></i></li>
+                            <li class="list-inline-item interactive-icon" title="Firebase"><i class="devicon-firebase-plain colored" style="font-size:45px;"></i></li>
+                            <li class="list-inline-item interactive-icon" title=".NET"><i class="devicon-dot-net-plain colored" style="font-size:45px;"></i></li>
+                            <li class="list-inline-item interactive-icon" title="CodeIgniter">
+                                <img src="https://cdn.worldvectorlogo.com/logos/codeigniter.svg" alt="CodeIgniter Logo" style="width:45px; height:auto;">
+                            </li>
+                            <li class="list-inline-item interactive-icon" title="Arduino IDE">
+                                <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="Arduino Logo" style="width:40px; height:auto;">
+                            </li>
+                            <li class="list-inline-item interactive-icon" title="Visual Studio">
+                                <img src="https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" alt="Visual Studio Logo" style="width:35px; height:auto;">
+                            </li>
+                            <li class="list-inline-item interactive-icon" title="Microsoft Access">
+                                <img src="https://cdn.worldvectorlogo.com/logos/microsoft-access-1.svg" alt="Microsoft Access" style="width:35px; height:auto;">
+                            </li>
+                        </ul>
+
+                        <div class="subheading mb-3" style="color:#ced4da">Workflow</div>
+                            <ul class="fa-ul mb-0" data-aos="fade-up" data-aos-delay="100">
+                                <li class="mb-2">
+                                    <span class="fa-li"><i class="fas fa-check interactive-icon" style="color:#00d25b;"></i></span>
+                                    <strong style="color:#ced4da;">Internet of Things & Embedded Systems:</strong>
+                                    <span style="color:#ced4da;"> Basic IoT concepts, sensor integration, microcontroller programming, Arduino IDE.</span>
+                                </li>
+                                <li class="mb-2">
+                                    <span class="fa-li"><i class="fas fa-check interactive-icon" style="color:#00d25b;"></i></span>
+                                    <strong style="color:#ced4da;">Agile Development Methodology:</strong>
+                                    <span style="color:#ced4da;"> Planning, Design, Development, Testing, Deployment, Review</span>
+                                </li>
+                                <li class="mb-2">
+                                    <span class="fa-li"><i class="fas fa-check interactive-icon" style="color:#00d25b;"></i></span>
+                                    <strong style="color:#ced4da;">Editing:</strong>
+                                    <span style="color:#ced4da;"> Video & Image Editing using Canva and Adobe Lightroom</span>
+                                </li>
+                                <li class="mb-2">
+                                    <span class="fa-li"><i class="fas fa-check interactive-icon" style="color:#00d25b;"></i></span>
+                                    <strong style="color:#ced4da;">Languages:</strong>
+                                    <span style="color:#ced4da;"> English, Tagalog</span>
+                                </li>
+                                <li class="mb-2"><span class="fa-li"><i class="fas fa-check interactive-icon" style="color:#00d25b;"></i></span><span style="color:#ced4da;">Active listening and collaboration among team members</span></li>
+                                <li class="mb-2"><span class="fa-li"><i class="fas fa-check interactive-icon" style="color:#00d25b;"></i></span><span style="color:#ced4da;">Capable to learn and adapt to new technologies, methodologies, and skills.</span></li>
+                                <li class="mb-2"><span class="fa-li"><i class="fas fa-check interactive-icon" style="color:#00d25b;"></i></span><span style="color:#ced4da;">Encouraging self-motivation to work smoothly with numerous tasks. </span></li>
+                                <li class="mb-2"><span class="fa-li"><i class="fas fa-check interactive-icon" style="color:#00d25b;"></i></span><span style="color:#ced4da;">Team-oriented and supportive in collaborative environments</span></li>
+                                <li class="mb-2"><span class="fa-li"><i class="fas fa-check interactive-icon" style="color:#00d25b;"></i></span><span style="color:#ced4da;">Effective verbal and written communication</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <hr class="m-0" />
+
+            <!-- Awards-->
+            <section class="resume-section" id="awards">
+                <div class="resume-section-content"data-aos="fade-up">
+                    <h2 class="mb-5" style="color: #ced4da;">Awards & Certifications</h2>
+                    <ul class="fa-ul mb-0" data-aos="fade-up" data-aos-delay="100">
+
+                        <!-- CompTIA IT Fundamentals+ (ITF+) Certification-->
+                        <li class="mb-2">
+                        <a href="https://www.credly.com/badges/a119bb70-809d-4c40-adec-90f4d14bde20/public_url" 
+                            target="_blank" 
+                            title="CompTIA IT Fundamentals+ (ITF+) Certification" 
+                            style="color: #ced4da; text-decoration: none;">
+                            <span class="fa-li">
+                                <i class="fas fa-trophy text-warning interactive-icon"></i>
+                            </span>
+                            CompTIA IT Fundamentals+ (ITF+) Certifications
+                        </a>
+                        </li>
+
+                        <!-- CCNA: Introduction to Networks-->
+                        <li class="mb-2">
+                        <a href="https://www.credly.com/badges/1210c303-5e54-476d-a2a0-474b34c23fde/public_url" 
+                            target="_blank" 
+                            title="CCNA: Introduction to Networks" 
+                            style="color: #ced4da; text-decoration: none;">
+                            <span class="fa-li">
+                                <i class="fas fa-trophy text-warning interactive-icon"></i>
+                            </span>
+                            CCNA: Introduction to Networks
+                        </a>
+                        </li>
+
+                        <!-- AWS Academy Cloud Foundations Badge-->
+                        <li class="mb-2">
+                        <a href="https://www.credly.com/badges/b8d7920f-23dc-44cf-9ca7-40458a295058" 
+                            target="_blank" 
+                            title="AWS Academy Cloud Foundations Badge" 
+                            style="color: #ced4da; text-decoration: none;">
+                            <span class="fa-li">
+                                <i class="fas fa-trophy text-warning interactive-icon"></i>
+                            </span>
+                            AWS Academy Graduate – AWS Academy Cloud Foundations
+                        </a>
+                        </li>
+
+                        <!-- Baseline: Data, ML, AI-->
+                        <li class="mb-2">
+                        <a href="https://www.cloudskillsboost.google/public_profiles/88c57b4a-b356-463b-ac54-3b82ddffbcce/badges/5438362" 
+                            target="_blank" 
+                            title="Baseline: Data, ML, AI" 
+                            style="color: #ced4da; text-decoration: none;">
+                            <span class="fa-li">
+                                <i class="fas fa-trophy text-warning interactive-icon"></i>
+                            </span>
+                            Baseline: Data, ML, AI
+                        </a>
+                        </li>
+
+                        <!-- Baseline: Infrastructure-->
+                        <li class="mb-2">
+                        <a href="https://www.cloudskillsboost.google/public_profiles/88c57b4a-b356-463b-ac54-3b82ddffbcce/badges/5068800" 
+                            target="_blank" 
+                            title="Baseline: Infrastructure" 
+                            style="color: #ced4da; text-decoration: none;">
+                            <span class="fa-li">
+                                <i class="fas fa-trophy text-warning interactive-icon"></i>
+                            </span>
+                            Baseline: Infrastructure
+                        </a>
+                        </li>
+
+                        <!-- Networking Fundamentals in Google Cloud-->
+                        <li class="mb-2">
+                        <a href="https://www.cloudskillsboost.google/public_profiles/88c57b4a-b356-463b-ac54-3b82ddffbcce/badges/5057488" 
+                            target="_blank" 
+                            title="Networking Fundamentals in Google Cloud" 
+                            style="color: #ced4da; text-decoration: none;">
+                            <span class="fa-li">
+                                <i class="fas fa-trophy text-warning interactive-icon"></i>
+                            </span>
+                            Networking Fundamentals in Google Cloud
+                        </a>
+                        </li>
+
+
+                        <!-- Google Cloud Essentials-->
+                        <li class="mb-2">
+                        <a href="https://www.cloudskillsboost.google/public_profiles/88c57b4a-b356-463b-ac54-3b82ddffbcce/badges/5012238" 
+                            target="_blank" 
+                            title="Google Cloud Essentials" 
+                            style="color: #ced4da; text-decoration: none;">
+                            <span class="fa-li">
+                                <i class="fas fa-trophy text-warning interactive-icon"></i>
+                            </span>
+                            Google Cloud Essentials
+                        </a>
+                        </li>
+
+                        <!--  Introduction to Edge Computing-->
+                        <li class="mb-2">
+                        <a href="assets/certificates/Edge Computing.pdf" 
+                            target="_blank" 
+                            title="Introduction to Edge Computing" 
+                            style="color: #ced4da; text-decoration: none;">
+                            <span class="fa-li">
+                                <i class="fas fa-trophy text-warning interactive-icon"></i>
+                            </span>
+                             Introduction to Edge Computing
+                        </a>
+                        </li>
+
+                        <!--  Software-Defined Networking, Openflow, NFV, & Open Ran-->
+                        <li class="mb-2">
+                        <a href="assets/certificates/SDN.pdf" 
+                            target="_blank" 
+                            title="Software-Defined Networking, Openflow, NFV, & Open Ran" 
+                            style="color: #ced4da; text-decoration: none;">
+                            <span class="fa-li">
+                                <i class="fas fa-trophy text-warning interactive-icon"></i>
+                            </span>
+                             Software-Defined Networking, Openflow, NFV, & Open Ran
+                        </a>
+                        </li>
+
+                        <!-- WearOS: Emerging Technology for Internet and Learning of Everything-->
+                        <li class="mb-2">
+                        <a href="assets/certificates/WearOS Emerging.pdf" 
+                            target="_blank" 
+                            title="WearOS: Emerging Technology for Internet and Learning of Everything" 
+                            style="color: #ced4da; text-decoration: none;">
+                            <span class="fa-li">
+                                <i class="fas fa-trophy text-warning interactive-icon"></i>
+                            </span>
+                            WearOS: Emerging Technology for Internet and Learning of Everything
+                        </a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </section>
+
+            <hr class="m-0" />
+            <!-- Projects -->
+            <section class="resume-section" id="Projects">
+                <div class="resume-section-content" data-aos="fade-up">
+                    <h2 class="mb-5" style="color:#ced4da;">Projects</h2>
+
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                        <!-- Project Card -->
+                        <div class="col">
+                            <div class="card h-100 bg-dark text-light border border-secondary" data-aos="fade-up" data-aos-delay="100">
+                                <!-- Image Wrapper -->
+                                <div class="d-flex justify-content-center align-items-center" style="height: 250px; background-color: #1e1e1e;">
+                                    <img src="assets/projects/4pics1word.jpg"
+                                        class="img-fluid"
+                                        alt="4Pics1Word"
+                                        style="max-height: 100%; object-fit: contain;"
+                                        onclick="openModal('assets/projects/4pics1word.jpg')">
+                                </div>
+
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <h5 class="card-title" style="color:#00d25b;">4 Pics 1 Word</h5>
+                                    <p class="card-text">
+                                        A puzzle game application developed using Python. It shows four related images and challenges the player to guess the correct word using a provided set of letters.
+                                    </p>
+
+                                    <p class="mb-1"><strong>Technologies Used:</strong></p>
+                                    <br>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item interactive-icon" title="Python">
+                                            <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg"alt="Python" style="width:40px; height:auto;">
+                                        </li>
+                                        <li class="list-inline-item interactive-icon" title="PyCharm">
+                                            <img src="https://cdn.worldvectorlogo.com/logos/jetbrains-pycharm.svg"alt="PyCharm"style="width:40px; height:auto;">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    
+
+                        <!-- Project Card -->
+                        <div class="col">
+                            <div class="card h-100 bg-dark text-light border border-secondary" data-aos="fade-up" data-aos-delay="100">
+                                <!-- Image Wrapper -->
+                                <div class="d-flex justify-content-center align-items-center" style="height: 250px; background-color: #1e1e1e;">
+                                    <img src="assets/projects/MalayanMecha1.png"
+                                        class="img-fluid"
+                                        alt="MalayanMecha1"
+                                        style="max-height: 100%; object-fit: contain;"
+                                        onclick="openModal('assets/projects/MalayanMecha1.png')">
+                                </div>
+
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <h5 class="card-title" style="color:#00d25b;">Malayan Mecha</h5>
+                                    <p class="card-text">
+                                        Malayan Mecha is an electronic commerce website developed using C# with the .NET Framework, a custom local keyboard business where to build and customize keyboard of your dreams.
+                                    </p>
+
+                                    <p class="mb-1"><strong>Technologies Used:</strong></p>
+                                    <br>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item interactive-icon" title="C#">
+                                            <i class="devicon-csharp-plain colored" style="font-size:45px; vertical-align: middle;"
+                                            ></i>
+                                        </li>
+                                        <li class="list-inline-item interactive-icon" title=".NET">
+                                            <i class="devicon-dot-net-plain colored" style="font-size:45px; vertical-align: middle;"></i>
+                                        </li>
+                                        <li class="list-inline-item interactive-icon" title="Microsoft Access">
+                                            <img src="https://cdn.worldvectorlogo.com/logos/microsoft-access-1.svg" alt="Microsoft Access" style="width:35px; vertical-align: middle; display: inline-block;">
+                                        </li>
+                                    </ul>
+                                </div>  
+                            </div>
+                        </div>
+
+                        <!-- Project Card -->
+                        <div class="col">
+                            <div class="card h-100 bg-dark text-light border border-secondary" data-aos="fade-up" data-aos-delay="100">
+                                <!-- Image Wrapper -->
+                                <div class="d-flex justify-content-center align-items-center" style="height: 250px; background-color: #1e1e1e;">
+                                    <img src="assets/projects/DancingLEDs2.jpg"
+                                        class="img-fluid"
+                                        alt="DancingLEDs2"
+                                        style="max-height: 100%; object-fit: contain;"
+                                        onclick="openModal('assets/projects/DancingLEDs2.jpg')">
+                                </div>
+
+                                <!-- Card Body -->
+                                <div class="card-body" data-aos="fade-up" data-aos-delay="100">
+                                    <h5 class="card-title" style="color:#00d25b;">Dancing LEDs</h5>
+                                    <p class="card-text">
+                                        Dancing LED Circuit is a project that can be used for aesthetic or decoration purposes using the aspects of Arduino Microcontroller emmbedded systems. With cool LED effects that are programmed to dance in a sequence, accompanied by music. It is a device that can be used for entertainment.
+                                    </p>
+
+                                    <p class="mb-1"><strong>Technologies Used:</strong></p>
+                                    <br>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item interactive-icon" title="C"><i class="devicon-c-plain colored" style="font-size:45px; vertical-align: middle;"></i></li>
+                                        <li class="list-inline-item interactive-icon" title="C++"><i class="devicon-cplusplus-plain colored" style="font-size:45px; vertical-align: middle;"></i></li>
+                                        <li class="list-inline-item interactive-icon" title="Arduino IDE">
+                                            <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="Arduino Logo" style="width:40px; vertical-align: middle; display: inline-block;">
+                                        </li>
+                                        <li class="list-inline-item interactive-icon" title="Database"><i class="fas fa-database" style="color:#f29111; vertical-align: middle; font-size:45px;"></i></li>
+                                        <li class="list-inline-item interactive-icon" title="PHP"><i class="fab fa-php" style="color:#8892be; vertical-align: middle; font-size:45px;"></i></li>
+                                    </ul>
+                                </div>  
+                            </div>
+                        </div>
+
+
+                        <!-- Project Card -->
+                        <div class="col">
+                            <div class="card h-100 bg-dark text-light border border-secondary" data-aos="fade-up" data-aos-delay="100">
+                                <!-- Image Wrapper -->
+                                <div class="d-flex justify-content-center align-items-center" style="height: 250px; background-color: #1e1e1e;">
+                                    <img src="assets/projects/ObjectAmbientTemperatureMeasuringSystem.jpg"
+                                        class="img-fluid"
+                                        alt="Dancing LEDs"
+                                        style="max-height: 100%; object-fit: contain;"
+                                        onclick="openModal('assets/projects/ObjectAmbientTemperatureMeasuringSystem.jpg')">
+                                </div>
+
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <h5 class="card-title" style="color:#00d25b;">Object and Ambient Temperature Measuring System</h5>
+                                    <p class="card-text">
+                                        This system records and documents object temperature which is the accurate temperature measured directly by a GY-906 MLX90614 Temperature Sensor Module, records ambient temperature which is the temperature around the sensor.The system will reflect the information in both Celsius and Fahrenheit.
+
+                                    </p>
+
+                                    <p class="mb-1"><strong>Technologies Used:</strong></p>
+                                    <br>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item interactive-icon" title="C"><i class="devicon-c-plain colored" style="font-size:45px; vertical-align: middle;"></i></li>
+                                        <li class="list-inline-item interactive-icon" title="C++"><i class="devicon-cplusplus-plain colored" style="font-size:45px; vertical-align: middle;"></i></li>
+                                        <li class="list-inline-item interactive-icon" title="Arduino IDE">
+                                            <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="Arduino Logo" style="width:40px; vertical-align: middle; display: inline-block;">
+                                        </li>
+                                        <li class="list-inline-item interactive-icon" title="Database"><i class="fas fa-database" style="color:#f29111; vertical-align: middle; font-size:45px;"></i></li>
+                                        <li class="list-inline-item interactive-icon" title="PHP"><i class="fab fa-php" style="color:#8892be; vertical-align: middle; font-size:45px;"></i></li>
+                                    </ul>
+                                </div>  
+                            </div>
+                        </div>
+
+
+                        <!-- Project Card -->
+                        <div class="col">
+                            <div class="card h-100 bg-dark text-light border border-secondary" data-aos="fade-up" data-aos-delay="100">
+                                <!-- Image Wrapper -->
+                                <div class="d-flex justify-content-center align-items-center" style="height: 250px; background-color: #1e1e1e;">
+                                    <img src="assets/projects/AppTemp1.png"
+                                        class="img-fluid"
+                                        alt="AppTemp1"
+                                        style="max-height: 100%; object-fit: contain;"
+                                        onclick="openModal('assets/projects/AppTemp1.png')">
+                                    <img src="assets/projects/AppTemp2.png"
+                                        class="img-fluid"
+                                        alt="AppTemp2"
+                                        style="max-height: 100%; object-fit: contain;"
+                                        onclick="openModal('assets/projects/AppTemp2.png')">
+                                    <img src="assets/projects/AppTemp3.png"
+                                        class="img-fluid"
+                                        alt="AppTemp3"
+                                        style="max-height: 100%; object-fit: contain;"
+                                        onclick="openModal('assets/projects/AppTemp3.png')">
+                                </div>
+
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <h5 class="card-title" style="color:#00d25b;">Object and Ambient Temperature Measuring System Mobile App</h5>
+                                    <p class="card-text">
+                                        The app uses a webservice that is connected to a database, which shows temperature gathered by the sensor, shows object and ambient temperature in both Celsius and Fahrenheit, complete with history of past readings, and logs system, users can choose to clear this history to avoid cluttering of information.
+
+                                    </p>
+
+                                    <p class="mb-1"><strong>Technologies Used:</strong></p>
+                                    <br>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item interactive-icon" title="C"><i class="devicon-c-plain colored" style="font-size:45px; vertical-align: middle;"></i></li>
+                                        <li class="list-inline-item interactive-icon" title="C++"><i class="devicon-cplusplus-plain colored" style="font-size:45px; vertical-align: middle;"></i></li>
+                                        <li class="list-inline-item interactive-icon" title="C#"><i class="devicon-csharp-plain colored" style="font-size:45px; vertical-align: middle;"></i></li>
+                                        <li class="list-inline-item interactive-icon" title="Database"><i class="fas fa-database" style="color:#f29111; vertical-align: middle; font-size:45px;"></i></li>
+                                        <li class="list-inline-item interactive-icon" title="PHP"><i class="fab fa-php" style="color:#8892be; vertical-align: middle; font-size:45px;"></i></li>
+                                    </ul>
+                                </div>  
+                            </div>
+                        </div>
+
+                        <!-- Project Card -->
+                        <div class="col">
+                            <div class="card h-100 bg-dark text-light border border-secondary" data-aos="fade-up" data-aos-delay="100">
+                                <!-- Image Wrapper -->
+                                <div class="d-flex justify-content-center align-items-center" style="height: 250px; background-color: #1e1e1e;">
+                                    <img src="assets/projects/Smartflow.jpg"
+                                        class="img-fluid"
+                                        alt="Dancing LEDs"
+                                        style="max-height: 100%; object-fit: contain;"
+                                        onclick="openModal('assets/projects/Smartflow.jpg')">
+                                    <img src="assets/projects/Smartflow4.jpg"
+                                        class="img-fluid"
+                                        alt="Dancing LEDs"
+                                        style="max-height: 100%; object-fit: contain;"
+                                        onclick="openModal('assets/projects/Smartflow4.jpg')">
+                                </div>
+
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <h5 class="card-title" style="color:#00d25b;">SmartFlow: IoT Enabled Portable Traffic Light System for Enhanced Urban Mobility</h5>
+                                    <p class="card-text">
+                                        Smartflow enables a prototype portable traffic light system which adapts through different traffic scenarios, adjust its corresponding 7-segment timer and light status based on the input traffic density gather by mutiple sensors, 
+                                        Traffic data are uploaded to a cloud-hosted database which is the Firebase Realtime-Database displays its indication through an Android mobile Application, overall for the purpose of enhancing its urban mobility and maintaining the aspects of Internet of Things.
+                                    </p>
+
+                                    <p class="mb-1"><strong>Technologies Used:</strong></p>
+                                    <br>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item interactive-icon" title="C"><i class="devicon-c-plain colored" style="font-size:45px; vertical-align: middle;"></i></li>
+                                        <li class="list-inline-item interactive-icon" title="C++"><i class="devicon-cplusplus-plain colored" style="font-size:45px; vertical-align: middle;"></i></li>
+                                        <li class="list-inline-item interactive-icon" title="Arduino IDE">
+                                            <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="Arduino Logo" style="width:40px; vertical-align: middle; display: inline-block;">
+                                        </li>
+                                        <li class="list-inline-item interactive-icon" title="Database"><i class="fas fa-database" style="color:#f29111; vertical-align: middle; font-size:45px;"></i></li>
+                                        <li class="list-inline-item interactive-icon" title="Firebase"><i class="devicon-firebase-plain colored" style="font-size:45px; vertical-align: middle;"></i></li>
+                                    </ul>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <hr class="m-0" />
+            <!-- Final Report-->
+            <section class="resume-section" id="FinalReport">
+                <div class="resume-section-content" data-aos="fade-up">
+                    <h2 class="mb-5" style="color:#ced4da;">Final Report</h2>
+
+                    <span class="lead" style="color:#ced4da;">A. Overview of the Practicum Engagement</span>
+                    <p class="lead mb-5 mt-2" style="color:#ced4da; text-align: justify;">
+                    I am currently assigned to the City of Biñan Human Settlements and Livelihood Office under the supervision of the Information 
+                    Communication Technology Office. Our team was to develop a system turning a paper-based census and tagging form to a web-based version,
+                    effectively collect, gather, manage, organize numerous population  household data, it enables faster identification, classification, retrieval, of demographic information.<br>
+                    <br>
+                    Total Practicum Hours: 486 hours<br>
+                    Hours Rendered: 416 hours (as of now)
+                    </p>
+                    <span class="lead" style="color:#ced4da;">Technologies Used:</span>
+                    <br><br>
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item interactive-icon" title="HTML5"><i class="fab fa-html5" style="color:#e34f26; width:40px; font-size:45px; vertical-align: middle;"></i></li>
+                        <li class="list-inline-item interactive-icon" title="CSS3"><i class="fab fa-css3-alt" style="color:#1572b6; width:40px; font-size:45px; vertical-align: middle;"></i></li>
+                        <li class="list-inline-item interactive-icon" title="Database"><i class="fas fa-database" style="color:#f29111; width:40px; font-size:45px; vertical-align: middle;"></i></li>
+                        <li class="list-inline-item interactive-icon" title="PHP"><i class="fab fa-php" style="color:#8892be; width:40px; font-size:45px; vertical-align: middle;"></i></li>
+                        <li class="list-inline-item interactive-icon" title="Bootstrap"><i class="fab fa-bootstrap" style="color:#00d25b; width:40px; font-size:45px; vertical-align: middle;"></i></li>
+                        <li class="list-inline-item interactive-icon" title="CodeIgniter">
+                            <img src="https://cdn.worldvectorlogo.com/logos/codeigniter.svg" alt="CodeIgniter Logo" style="width:45px; vertical-align: middle;">
+                        </li>
+                        <li class="list-inline-item interactive-icon" title="Visual Studio">
+                            <img src="https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" alt="Visual Studio Logo" style="width:35px; vertical-align: middle;">
+                        </li>
+                    </ul>
+                    <br><br>
+
+                    <!-- Section Title -->
+                    <span class="lead" style="color:#ced4da;">B. Presentation of Output</span>
+                    <br><br>
+                    <!-- Card Group Container  -->
+                    <div class="d-flex flex-wrap gap-3 justify-content-center">
+
+                        <!-- Card 1: Account Management -->
+                        <div class="card bg-dark text-light border border-secondary"
+                            data-aos="fade-up" 
+                            data-aos-delay="100"
+                            style="cursor:pointer; width: 300px; font-family: 'Poppins', sans-serif;"
+                            onclick="openModalDesc('assets/finalreport/Account Management.jpg', 'Account Management', 'This module enables administrators to efficiently manage and oversee all user accounts within the system. It provides core functionalities such as account creation, viewing, editing, and deletion. Additionally, the module supports role-based access control, allowing administrators to assign specific user roles—such as Admin, Encoder, and Viewer, each with distinct permissions and access levels. Through this structure, the system ensures secure and organized user access, with administrators having full control, encoders granted data entry privileges, and viewers limited to read-only access. This role-based approach enhances accountability, maintains system integrity.')">
+                            
+                            <div class="card-body text-center">
+                                <img src="assets/img/bchslo.png" alt="bchslo" style="width:60px; height:auto; margin-bottom: 10px;">
+                                <h5 class="card-title lead" style="color:#ced4da;">Account Management</h5>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: System Logs -->
+                        <div class="card bg-dark text-light border border-secondary"
+                            data-aos="fade-up" 
+                            data-aos-delay="100"
+                            style="cursor:pointer; width: 300px; font-family: 'Poppins', sans-serif;"
+                            onclick="openModalDesc('assets/finalreport/System Logs 2.jpg', 'System Logs', 'System Logs are an essential feature in the system. Keeping tracks on records within the system, each action, events, activities that a user does are being recorded that occur within the system. These logs are used to monitor system performance, maintaining accountability among users.')">
+                            
+                            <div class="card-body text-center">
+                                <img src="assets/img/bchslo.png" alt="bchslo" style="width:60px; height:auto; margin-bottom: 10px;">
+                                <h5 class="card-title lead" style="color:#ced4da;">System Logs</h5>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Manage Census and Tagging -->
+                        <div class="card bg-dark text-light border border-secondary"
+                            data-aos="fade-up" 
+                            data-aos-delay="100"
+                            style="cursor:pointer; width: 300px; font-family: 'Poppins', sans-serif;"
+                            onclick="openModalDesc('assets/finalreport/ManageCensus.jpg', 'Manage Census and Tagging', 'The Census and Tagging Module is designed to facilitate the organized management of census-related data within the system. It enables authorized users to input, encode, categorize, and manage data entries through a user-friendly interface. Search and Filter lets users to locate specifics records quickly. Data encoding and categorization allows efficient encode raw census data such names, gender, address, lot info, classification, locations, tagging no.')">
+                            
+                            <div class="card-body text-center">
+                                <img src="assets/img/bchslo.png" alt="bchslo" style="width:60px; height:auto; margin-bottom: 10px;">
+                                <h5 class="card-title lead" style="color:#ced4da;">Manage Census and Tagging</h5>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Manage Beneficiary -->
+                        <div class="card bg-dark text-light border border-secondary"
+                            data-aos="fade-up" 
+                            data-aos-delay="100"
+                            style="cursor:pointer; width: 300px; font-family: 'Poppins', sans-serif;"
+                            onclick="openModalDesc('assets/finalreport/ManageBeneficiary.jpg', 'Manage Beneficiary', 'The Beneficiary Module handles data for individuals and houseold who may be affected of a disaster within the community, useful for documentation and field distribution, integration with the census-data that only registered individuals and houseold are elligible for a beneficiary and approved by the system. Full CRUD functionalities such create, read, update, delete.')">
+                            
+                            <div class="card-body text-center">
+                                <img src="assets/img/bchslo.png" alt="bchslo" style="width:60px; height:auto; margin-bottom: 10px;">
+                                <h5 class="card-title lead" style="color:#ced4da;">Manage Beneficiary</h5>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <br><br>
+
+                    <span class="lead" style="color:#ced4da;">C. Synthesis of the Practicum Engagement</span>
+                    <p class="lead mb-5 mt-2" style="color:#ced4da; text-align: justify;" data-aos="fade-up" data-aos-delay="100">
+                        During my Internship at the City Government of Biñan, I was assigned to the City of Biñan Human Settlements and Livelihood Office, therefore assigned
+                        to develop a system together with a team, the overall task allowed me to understand certain procedures such as data gathering the real needs of the stakeholders and understand its purpose clearly
+                        to properly collaborate with numerous individuals, improving overall communication and composure with the environment, learn to adapt with different personalities and act as a professional at all times.
+                        As for the technical skills the technologies used such as Php, HTML, CSS, CodeIgniter 4 Framework MVC (Model-View-Controller), phpmyadmin database in which it is used to the develop the system itself overall enanching my skills and further explore
+                        programs and functionalities to improve more of my IT Career.
+                    </p>
+                    <span class="lead" style="color:#ced4da;">D. Appendices</span>
+                    <br><br>
+                    <ul class="fa-ul mb-0" data-aos="fade-up" data-aos-delay="100">
+
+                        <!-- 1.0 Competency-Based CV-->
+                        <li class="mb-2">
+                        <span class="fa-li">
+                            <i class="fas fa-check interactive-icon" style="color:#00d25b;"></i>
+                        </span>
+                        <a href="assets/appendices/Competency_Based CV_Santiago.pdf" 
+                            target="_blank" 
+                            title="1.0 Competency-Based CV" 
+                            style="color: #ced4da; text-decoration: none;">
+                            <span class="fa-li">
+                                <i class="fas fa-check interactive-icon" style="color:#00d25b;"></i>
+                            </span>
+                            1.0 Competency-Based CV
+                        </a>
+                        </li>
+
+
+                        <!-- 2.0 Practicum Acceptance-->
+                        <li class="mb-2">
+                        <a href="assets/appendices/Practicum Acceptance.pdf" 
+                            target="_blank" 
+                            title="2.0 Practicum Acceptance" 
+                            style="color: #ced4da; text-decoration: none;">
+                            <span class="fa-li">
+                                <i class="fas fa-check interactive-icon" style="color:#00d25b;"></i>
+                            </span>
+                            2.0 Practicum Acceptance
+                        </a>
+                        </li>
+
+                        <!-- 3.0 Liability Waiver-->
+                        <li class="mb-2">
+                        <a href="assets/appendices/Liability Waiver.pdf" 
+                            target="_blank" 
+                            title="3.0 Liability Waiver" 
+                            style="color: #ced4da; text-decoration: none;">
+                            <span class="fa-li">
+                                <i class="fas fa-check interactive-icon" style="color:#00d25b;"></i>
+                            </span>
+                            3.0 Liability Waiver
+                        </a>
+                        </li>
+
+                        <!-- 4.0 Training Plan-->
+                        <li class="mb-2">
+                        <a href="assets/appendices/Training Plan.pdf" 
+                            target="_blank" 
+                            title="4.0 Training Plan" 
+                            style="color: #ced4da; text-decoration: none;">
+                            <span class="fa-li">
+                                <i class="fas fa-check interactive-icon" style="color:#00d25b;"></i>
+                            </span>
+                            4.0 Training Plan
+                        </a>
+                        </li>
+
+                        <!-- 5.0 Complete Weekly Journal-->
+                        <li class="mb-2">
+                        <a href="assets/appendices/Complete Weekly Journal.pdf" 
+                            target="_blank" 
+                            title="5.0 Complete Weekly Journal" 
+                            style="color: #ced4da; text-decoration: none;">
+                            <span class="fa-li">
+                                <i class="fas fa-check interactive-icon" style="color:#00d25b;"></i>
+                            </span>
+                            5.0 Complete Weekly Journal
+                        </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+
+
+            </section>
+
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+
+        <!-- AOS Script-->
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+        <script>
+            function openModal(src) {
+                const modal = document.getElementById("imgModal");
+                const modalImg = document.getElementById("modalImage");
+                modal.style.display = "block";
+                modalImg.src = src;
+            }
+
+            function closeModal() {
+                document.getElementById("imgModal").style.display = "none";
+            }
+
+            function openModalDesc(imgSrc, title, desc) {
+                document.getElementById("imgModalDesc").style.display = "flex";
+                document.getElementById("modalImageDesc").src = imgSrc;
+                document.getElementById("modalTitle").textContent = title;
+                document.getElementById("modalDesc").textContent = desc;
+            }
+
+            function closeModalDesc(event) {
+                if (event.target.id === "imgModalDesc" || event.target.className === "modal-close") {
+                    document.getElementById("imgModalDesc").style.display = "none";
+                }
+            }
+        </script>
+
+        <!-- Modal Structure -->
+        <div id="imgModal" class="modal" onclick="closeModal()">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+
+        <!-- Custom Modal -->
+        <div id="imgModalDesc" class="modalDesc" onclick="closeModalDesc(event)">
+            <span class="modal-close" onclick="closeModalDesc(event)">&times;</span>
+            <div class="modal-content-wrapper-Desc">
+                <img class="modal-img-Desc" id="modalImageDesc" alt="Modal Image">
+                <p id="modalTitle" class="mt-3" style="color:#ced4da;"></p>
+                <p id="modalDesc" style="color:#ced4da; text-align: justify; margin-bottom: 25px;"></p>
+            </div>
+        </div>
+
+
+
+    </body>
+</html>
